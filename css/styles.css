@@ -1,52 +1,186 @@
-/* Your Website Styles */
 
 
+/*Codepen GalleryL: http://codepen.io/davilious/pen/mGEBC*/
 
-/* Gallery Stying */
-.gallery .control-button {
-  color: #ccc;
-  color: rgba(255, 255, 255, 0.4);
+@@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@keyframes move {
+  to {
+    background-position: 100% 50%;
+  }
 }
-
-.gallery .control-button:hover {
-  color: white;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/*
-	Theme controls how everything looks in Gallery CSS.
-*/
-.gallery {
-  position: relative;
-}
-.gallery .item {
-  height: 400px;
-  overflow: hidden;
-  text-align: center;
-  background: #4d87e2;
-}
-.gallery .controls {
-  position: absolute;
-  bottom: -120px;
+html, body {
   width: 100%;
-  text-align: center;
+  height: 100%;
+  background: black;
 }
 
-.gallery .controls img {
-  border: 5px solid #000;
+.container {
+  display: box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 700px;
 }
 
-.gallery .control-button {
+.photo {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-right: 10px solid black;
+  width: 10%;
+  min-width: 10%;
+  min-height: 100%;
+  overflow: hidden;
+  transition: all .6s ease-in-out;
+  opacity: .6;
+  float: left;
+}
+.photo:hover {
+  width: 40%;
+  animation: move 4s linear .5s infinite alternate;
+  opacity: 1;
+}
+.photo:hover:after {
+  right: 0% !important;
+  transition: right .4s linear 1s;
+}
+
+.photo:nth-child(1) {
+  position: relative;
+  flex: 1;
+  background: url("http://farm9.staticflickr.com/8233/8599953198_728f34af8c_b.jpg") no-repeat;
+  background-position: 50% 50%;
+  -webkit-filter: hue-rotate(50deg);
+}
+.photo:nth-child(1):after {
+  position: absolute;
+  right: -50%;
   display: inline-block;
-  margin: 0 .02em;
-  font-size: 3em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: black;
+  opacity: .8;
+  color: white;
+  width: 45%;
+  height: 50px;
+  line-height: 50px;
+  bottom: 15%;
   text-align: center;
-  text-decoration: none;
-  transition: color .1s;
+  content: attr(data-title);
 }
 
+.photo:nth-child(2) {
+  position: relative;
+  flex: 2;
+  background: url("http://farm9.staticflickr.com/8429/7648466884_11fa71b93a_b.jpg") no-repeat;
+  background-position: 50% 50%;
+  -webkit-filter: hue-rotate(100deg);
+}
+.photo:nth-child(2):after {
+  position: absolute;
+  right: -50%;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: black;
+  opacity: .8;
+  color: white;
+  width: 45%;
+  height: 50px;
+  line-height: 50px;
+  bottom: 15%;
+  text-align: center;
+  content: attr(data-title);
+}
 
-/* Show Grid */
-.showgrid {
-	background: url("../img/grid-bg.png") repeat-y;
+.photo:nth-child(3) {
+  position: relative;
+  flex: 3;
+  background: url("http://farm9.staticflickr.com/8150/7333302794_428ec02806_b.jpg") no-repeat;
+  background-position: 50% 50%;
+  -webkit-filter: hue-rotate(200deg);
+}
+.photo:nth-child(3):after {
+  position: absolute;
+  right: -50%;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: black;
+  opacity: .8;
+  color: white;
+  width: 45%;
+  height: 50px;
+  line-height: 50px;
+  bottom: 15%;
+  text-align: center;
+  content: attr(data-title);
+}
+
+.photo:nth-child(4) {
+  position: relative;
+  flex: 4;
+  background: url("http://farm9.staticflickr.com/7198/6887125251_6055b892d1_b.jpg") no-repeat;
+  background-position: 50% 50%;
+  -webkit-filter: hue-rotate(400deg);
+}
+.photo:nth-child(4):after {
+  position: absolute;
+  right: -50%;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: black;
+  opacity: .8;
+  color: white;
+  width: 45%;
+  height: 50px;
+  line-height: 50px;
+  bottom: 15%;
+  text-align: center;
+  content: attr(data-title);
+}
+
+.photo:nth-child(5) {
+  position: relative;
+  flex: 5;
+  background: url("http://farm9.staticflickr.com/7210/6958219905_3844327f5e_b.jpg") no-repeat;
+  background-position: 50% 50%;
+  -webkit-filter: hue-rotate(800deg);
+}
+.photo:nth-child(5):after {
+  position: absolute;
+  right: -50%;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: black;
+  opacity: .8;
+  color: white;
+  width: 45%;
+  height: 50px;
+  line-height: 50px;
+  bottom: 15%;
+  text-align: center;
+  content: attr(data-title);
+}
+
+.photo:nth-child(5) {
+  border-right: none;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    display: block !important;
+  }
+
+  .photo {
+    width: 100% !important;
+    border-bottom: 10px solid black !important;
+    background-position: 50% 35% !important;
+  }
 }
