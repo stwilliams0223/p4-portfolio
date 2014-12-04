@@ -319,7 +319,7 @@ html, body {
 .photo:nth-child(2) {
   position: relative;
   flex: 2;
-  background: url("http://farm9.staticflickr.com/8429/7648466884_11fa71b93a_b.jpg") no-repeat;
+  background: url("../img/composition.png") no-repeat;
   background-position: 50% 50%;
   -webkit-filter: hue-rotate(100deg);
 }
@@ -344,7 +344,7 @@ html, body {
 .photo:nth-child(3) {
   position: relative;
   flex: 3;
-  background: url("http://farm9.staticflickr.com/8150/7333302794_428ec02806_b.jpg") no-repeat;
+  background: url("../img/sketch.png") no-repeat;
   background-position: 50% 50%;
   -webkit-filter: hue-rotate(100deg);
 }
@@ -369,9 +369,9 @@ html, body {
 .photo:nth-child(4) {
   position: relative;
   flex: 4;
-  background: url("http://farm9.staticflickr.com/7198/6887125251_6055b892d1_b.jpg") no-repeat;
+  background: url("../img/photo.png") no-repeat;
   background-position: 50% 50%;
-  -webkit-filter: hue-rotate(400deg);
+  -webkit-filter: hue-rotate(800deg);
 }
 .photo:nth-child(4):after {
   position: absolute;
@@ -388,15 +388,15 @@ html, body {
   bottom: 15%;
   text-align: center;
   content: attr(data-title);
-  -webkit-filter: hue-rotate(-400deg);
+  -webkit-filter: hue-rotate(-800deg);
 }
 
 .photo:nth-child(5) {
   position: relative;
   flex: 5;
-  background: url("http://farm9.staticflickr.com/7210/6958219905_3844327f5e_b.jpg") no-repeat;
+  background: url("../img/arts_crafts.png") no-repeat;
   background-position: 50% 50%;
-  -webkit-filter: hue-rotate(800deg);
+  -webkit-filter: hue-rotate(200deg);
 }
 .photo:nth-child(5):after {
   position: absolute;
@@ -413,7 +413,7 @@ html, body {
   bottom: 15%;
   text-align: center;
   content: attr(data-title);
-  -webkit-filter: hue-rotate(-800deg);
+  -webkit-filter: hue-rotate(-200deg);
 }
 
 .photo:nth-child(5) {
