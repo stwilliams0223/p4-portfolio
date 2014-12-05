@@ -90,7 +90,7 @@ text-decoration: none;
 color: #ff3054;
 cursor: auto;
 transition-property: background, color, opacity;
-  transition-duration: .5s;
+  transition-duration: .2s;
   transition-timing-function: linear;
   cursor: pointer;
 
@@ -104,6 +104,51 @@ a:active,  {
 
 a:hover{
   color:#3bff5c;
+
+
+}
+
+
+/**navigation*/
+
+nav{
+
+
+  width: 100%;
+  background: #272727;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 2em;
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+nav ul{
+  list-style: none;
+  display: inline;
+  padding-left: 10px;
+  margin: 0;
+  color: #fff;
+  
+}
+
+nav ul li{
+  display: inline;
+  padding-left: 30px;
+  
+}
+
+nav a:hover{
+
+color: white;
 
 
 }
@@ -237,6 +282,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: auto;
+margin-top: 2%;
 
 
 
