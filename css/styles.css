@@ -127,6 +127,7 @@ nav{
   left: 0;
   width: 100%;
   text-align: center;
+  z-index:4;
 
 }
 
@@ -283,6 +284,7 @@ left: 0;
 width: 100%;
 height: auto;
 margin-top: 2%;
+z-index:3;
 
 
 
@@ -367,7 +369,65 @@ section {
 
 
 
+/* =========
 
+Media Queries
+
+=========*/
+
+
+
+/*Tablet Size*/
+@media screen and (max-width: 900px) {
+
+
+ nav{
+
+
+  font-size:  1.3em;
+ } 
+
+h1{
+
+font-size: 7em;
+
+}
+
+h2{
+
+margin-top: 15%%;
+
+}
+
+}
+
+
+/*Mobile Size*/
+@media screen and (max-width: 480px) {
+
+
+
+  .banner {
+
+    margin-top: 20%;
+
+  }
+
+
+  h1{
+
+    font-size:  5em;
+
+  }
+
+  h2{
+
+  margin-top: 20%;
+
+  }
+
+
+}
 
 
 
@@ -431,6 +491,7 @@ section {
   
   -webkit-box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.25);
   box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  z-index:1;
 }
 
 .galleryItem img {
@@ -499,3 +560,7 @@ section {
   bottom: 0;
   height: 125px;
 }
+
+
+
+
